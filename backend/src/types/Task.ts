@@ -6,5 +6,5 @@ enum Status {
 
 export interface Task {
     title: string
-    status: Status,
+    status: string,
 }

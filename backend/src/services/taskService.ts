@@ -3,7 +3,6 @@ import prisma from "../lib/prisma";
 
 export class TaskService {
     async simulate(taskData: Task) {
-
         return await prisma.task.create({
             data: {
                 title: taskData.title,

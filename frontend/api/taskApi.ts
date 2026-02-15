@@ -1,4 +1,5 @@
 import apiClient from "./api";
+import axios from "axios";
 
 enum Status {
     TODO,
@@ -12,19 +13,25 @@ export interface Task {
     status: Status
 }
 
-class TaskApi {
-    async getTask(taskId: string) {
-        try {
-            const task: Task = {
-                taskId: "kda-&lsjdf-&ljdslfsd",
-                title: "Faire ses devoirs",
-                status: Status.DONE
-            }
-            return task;
-        } catch (error: any) {
-            console.error("Error during request : ", error)
-        }
+export async function getTask(taskId: string) {
+    try {
+        const res = await apiClient.get("/");
+
+        setInterval(() => {
+            res
+        }, 5000);
+        return res.data;
+    } catch (error: any) {
+        console.error("Error during request : ", error)
     }
 }
 
-export default TaskApi;
+export async function simulate() {
+    try {
+        const task = await apiClient.post("/", {
+            
+        })
+    } catch (error: any) {
+        console.error("Error from API : ", error)
+    }
+}

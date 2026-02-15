@@ -2,7 +2,7 @@ import { COLORS } from "@/constant/colors";
 import { StyleSheet } from "react-native"
 import { StatusBar } from "react-native"
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: COLORS.background
@@ -18,4 +18,9 @@ const styles = StyleSheet.create({
     },
 })
 
-export default styles;
+
+export const buttonStyle = StyleSheet.create({
+    container: {
+
+    }
+})
