@@ -1,19 +1,17 @@
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
-
-
-// export const unstable_settings = {
-//   anchor: '(tabs)',
-// };
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context';
+import styles from '@/styles/styles';
 
 export default function RootLayout() {
-
   return (
-    <Stack>
-      <StatusBar style="auto" />
-      <Stack.Screen name="index" options={{ presentation: 'modal', title: 'Modal' }} />
-    </Stack>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+        </Stack>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }

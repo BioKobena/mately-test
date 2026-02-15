@@ -1,0 +1,22 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+}
+
+enum Status {
+    TODO      @map("todo")
+    IN_PROGRESS @map("in_progress")
+    DONE      @map("done")
+}
+
+model Task {
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    title     String
+    status    Status   @default(TODO)
+    createdAt DateTime @default(now())
+
+    @@index([createdAt], map: "createAt_index")
+}
