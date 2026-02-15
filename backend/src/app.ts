@@ -1,7 +1,9 @@
 import express, { Application, Request, Response, NextFunction } from 'express'
 import cors from 'cors'
+import router from "./routes/taskRoutes"
 
 const app: Application = express()
+
 
 app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
@@ -12,6 +14,7 @@ app.use(cors({
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+app.use("/", router)
 
 app.get('/api', (req: Request, res: Response) => {
     res.json({
