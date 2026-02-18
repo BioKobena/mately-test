@@ -58,7 +58,7 @@ npx prisma db push
 Lancer le serveur :
 
 ```bash
-npm run dev
+npm run start
 ```
 
 Le serveur démarre sur `http://localhost:8080`
@@ -91,7 +91,7 @@ Scanner le QR code avec Expo Go (iOS/Android) ou lancer sur simulateur.
 3. Appuyer sur "Lancer la simulation" pour créer 10 tâches espacées de 5 secondes
 4. Observer l'affichage automatique des tâches dans la liste
 
-Le polling se fait automatiquement toutes les 5 secondes pour récupérer les nouvelles tâches sans recharger la liste complète.
+Le fetch se fait automatiquement toutes les 5 secondes pour récupérer les nouvelles tâches sans recharger la liste complète.
 
 ## Modèle de données
 
