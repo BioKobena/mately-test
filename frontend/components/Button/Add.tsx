@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { TouchableOpacity, Text, View } from 'react-native'
+import { buttonStyle } from '@/styles/styles'
 
-const Add = () => {
-  return (
-    <View>
-      <Text>Add</Text>
-    </View>
-  )
+type SimulateProps = {
+  handleCreateTask: () => void;
 }
 
-export default Add
+const Simulate = ({ handleCreateTask }: SimulateProps) => (
+  <View style={buttonStyle.container}>
+    <TouchableOpacity style={buttonStyle.buttonPress} onPress={handleCreateTask} activeOpacity={0.7}>
+      <Text style={buttonStyle.textButton}>Simulate</Text>
+    </TouchableOpacity>
+  </View>
+)
 
-const styles = StyleSheet.create({})
+export default Simulate

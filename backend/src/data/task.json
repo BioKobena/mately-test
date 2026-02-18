@@ -1,31 +1,12 @@
-[{
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}, {
-    "title": "Faire son lit",
-    "status": "DONE"
-}]
+[
+    { "title": "Mettre à jour la doc", "status": "todo" },
+    { "title": "Corriger le bug de connexion", "status": "in_progress" },
+    { "title": "Faire son lit", "status": "todo" },
+    { "title": "Écrire les tests Jest", "status": "done" },
+    { "title": "CI/CD à revoir", "status": "in_progress" },
+    { "title": "Analyser les logs d'erreur", "status": "todo" },
+    { "title": "Optimiser mon code", "status": "done" },
+    { "title": "Créer le composant Card", "status": "todo" },
+    { "title": "Optimiser les requêtes MongoDB", "status": "in_progress" },
+    { "title": "Faire la démo au client", "status": "done" }
+]

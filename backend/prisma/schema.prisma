@@ -7,17 +7,10 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-enum Status {
-    TODO      @map("todo")
-    IN_PROGRESS @map("in_progress")
-    DONE      @map("done")
-}
-
 model Task {
     id        String   @id @default(auto()) @map("_id") @db.ObjectId
     title     String
-    status    Status   @default(TODO)
+    status    String
     createdAt DateTime @default(now())
-
     @@index([createdAt], map: "createAt_index")
 }
